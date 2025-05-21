@@ -7,16 +7,28 @@
 		<key>Gomu.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
+		</dict>
+		<key>GomuWatch Watch App.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>RunningTrackerWidgetExtension.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>C3E632D82DCBB4C60030FBC0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>EC3E39812DA61DB600AC2A7E</key>
 		<dict>
 			<key>primary</key>

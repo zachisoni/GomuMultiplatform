@@ -26,10 +26,10 @@ class HealthManager {
     
     
     func requestAuthorization(completion: @escaping (Bool) -> Void) {
-        // The quantity type to write to the health store.
-//        let typesToShare: Set = [
-//            HKQuantityType.workoutType()
-//        ]
+        
+        let typesToShare: Set = [
+            HKQuantityType.workoutType()
+        ]
 
         let readTypes: Set = [
             HKObjectType.quantityType(forIdentifier: .heartRate)!,
@@ -38,7 +38,7 @@ class HealthManager {
             HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!
         ]
 
-        healthStore.requestAuthorization(toShare: [], read: readTypes) { success, error in
+        healthStore.requestAuthorization(toShare: typesToShare, read: readTypes) { success, error in
             completion(success)
         }
     }

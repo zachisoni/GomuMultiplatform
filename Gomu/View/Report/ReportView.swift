@@ -69,7 +69,7 @@ public struct ReportView: View {
                             Text("📏 Distance: \(run.distance, specifier: "%.2f") km")
                             Text("🏃 Avg Pace: \(run.averagePace)")
                             Text("🔥 Calories: \(run.calories)")
-                            Text("❤️ BPM: \(run.bpm)")
+                            Text("❤️ BPM: \(run.avgBpm)")
                         }
                         .padding()
                         .listRowBackground(Color("white2"))
@@ -114,6 +114,7 @@ public struct ReportView: View {
         //            }
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
+            #if os(iOS)
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: {
                     isShowingProfile = true
@@ -132,6 +133,7 @@ public struct ReportView: View {
                         .foregroundColor(.orange)
                 }
             }
+            #endif
         }
         .fullScreenCover(isPresented: $isShowingProfile) {
             ProfileView()

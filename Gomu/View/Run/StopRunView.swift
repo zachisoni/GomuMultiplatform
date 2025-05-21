@@ -21,9 +21,11 @@ struct StopRunView: View {
     @State var dialog: String = "Are you want to stop?"
 
     private func triggerMediumHaptic(){
+        #if os(iOS)
         let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.prepare()
         generator.impactOccurred()
+        #endif
     }
     var body: some View {
         ZStack{
@@ -130,25 +132,25 @@ struct RunDetails: View{
             HStack{
                 InformationText(label: "Time",
                                 data: (
-                                    ((viewModel.duration >= 60 ? DateComponentsFormatter().string(from: viewModel.duration)
-                                      : (viewModel.duration >= 10 ? "00:\(Int(viewModel.duration))" : "00:0\(Int(viewModel.duration))" )) ?? "00:00")
+                                    ((viewModel.currentRun.duration >= 60 ? DateComponentsFormatter().string(from: viewModel.currentRun.duration)
+                                      : (viewModel.currentRun.duration >= 10 ? "00:\(Int(viewModel.currentRun.duration))" : "00:0\(Int(viewModel.currentRun.duration))" )) ?? "00:00")
                                 ),
                                 fontSize: 30
                                 )
                 Spacer()
-                InformationText(label: "Avg. Pace", data: viewModel.avgPace, fontSize: 30)
+                InformationText(label: "Avg. Pace", data: viewModel.currentRun.averagePace, fontSize: 30)
                 Spacer()
                 InformationText(label: "Kilometres",
-                                data: String(format: "%.2f", viewModel.distance),
+                                data: String(format: "%.2f", viewModel.currentRun.distance),
                                 fontSize: 30)
             }
             HStack{
-                InformationText(label: "Elevation", data: String(format: "%.2f",(viewModel.elevation)), fontSize: 30)
+                InformationText(label: "Elevation", data: String(format: "%.2f",(viewModel.currentRun.elevation)), fontSize: 30)
                 Spacer()
 //                InformationText(label: "BPM", data:( viewModel.bpm != 0 ?  String(format: "%.2f",viewModel.bpm.formatted()) : "--"), fontSize: 30)
-                InformationText(label: "BPM", data: viewModel.bpm.formatted(), fontSize: 30)
+                InformationText(label: "BPM", data: viewModel.currentRun.avgBpm.formatted(), fontSize: 30)
                 Spacer()
-                InformationText(label: "Calories", data: viewModel.calories.formatted(), fontSize: 30)
+                InformationText(label: "Calories", data: viewModel.currentRun.calories.formatted(), fontSize: 30)
             }
         }
         .navigationBarBackButtonHidden(true)

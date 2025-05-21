@@ -106,7 +106,7 @@ struct MainTabView: View {
     
     init() {
         _viewModel = StateObject(wrappedValue: RunViewModel())
-        
+        #if os(iOS)
         let tabBarAppearance = UITabBarAppearance()
         tabBarAppearance.configureWithOpaqueBackground()
         tabBarAppearance.backgroundColor = UIColor(named: "primary")
@@ -123,6 +123,7 @@ struct MainTabView: View {
         if #available(iOS 15.0, *) {
             UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
         }
+        #endif
     }
     
     var body: some View {
@@ -161,6 +162,7 @@ struct MainTabView: View {
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
+                #if os(iOS)
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
                         isShowingProfile = true
@@ -180,6 +182,7 @@ struct MainTabView: View {
                             .foregroundColor(.orange)
                     }
                 }
+                #endif
             }
             .fullScreenCover(isPresented: $isShowingSettings) {
                 SettingsView()

@@ -18,9 +18,11 @@ public struct StartRunView: View {
     @ObservedObject var soundManager = SoundRunManager.shared
 
     private func triggerMediumHaptic(){
+        #if os(iOS)
         let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.prepare()
         generator.impactOccurred()
+        #endif
     }
     
     public var body: some View {
@@ -38,10 +40,10 @@ public struct StartRunView: View {
             
             VStack{
                 VStack{
-                    InformationText(label: "kilometers", data: String(format: "%.2f", viewModel.distance))
+                    InformationText(label: "kilometers", data: String(format: "%.2f", viewModel.currentRun.distance))
                     HStack{
-                        InformationText(label: "Time", data: formatTime(viewModel.duration))
-                        InformationText(label: "Avg. Pace", data: viewModel.avgPace)
+                        InformationText(label: "Time", data: viewModel.formatTime(viewModel.currentRun.duration))
+                        InformationText(label: "Avg. Pace", data: viewModel.currentRun.averagePace)
                     }
                 }
                 .padding()
@@ -94,7 +96,7 @@ public struct StartRunView: View {
                     triggerMediumHaptic()
                     viewModel.pauseRun()
 //                    isPaused = true
-                    self.viewModel.isRunning = false
+//                    self.viewModel.isRunning = false
                     path.append("stopRun")
                 }){
                     Image(systemName: "pause")
@@ -120,22 +122,6 @@ public struct StartRunView: View {
         
     }
     
-    private func formatTime(_ time: TimeInterval) -> String {
-        let minutes = Int(time) / 60
-        let seconds = Int(time) % 60
-        return String(format: "%02d:%02d", minutes, seconds)
-    }
-    
-    private func formatPace(_ duration: TimeInterval, _ distance: Double) -> String {
-        let distanceInMiles = distance / 1.6
-        guard distanceInMiles >= 1 else { return "--" }
-        
-        let paceInSeconds = duration / distanceInMiles
-        let minutes = Int(paceInSeconds) / 60
-        let seconds = Int(paceInSeconds) % 60
-        
-        return String(format: "%02d:%02d", minutes, seconds)
-    }
 }
 
 #Preview {

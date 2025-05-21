@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EC3E39852DA61DB600AC2A7E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3E39842DA61DB600AC2A7E /* WidgetKit.framework */; };
-		EC3E39872DA61DB600AC2A7E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3E39862DA61DB600AC2A7E /* SwiftUI.framework */; };
+		C3E632E32DCBB4C70030FBC0 /* GomuWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C3E632D92DCBB4C60030FBC0 /* GomuWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EC3E39982DA61DB700AC2A7E /* RunningTrackerWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EC3E39822DA61DB600AC2A7E /* RunningTrackerWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C3E632E12DCBB4C70030FBC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC4A01072D923B350086A781 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3E632D82DCBB4C60030FBC0;
+			remoteInfo = "GomuWatch Watch App";
+		};
 		EC3E39962DA61DB700AC2A7E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EC4A01072D923B350086A781 /* Project object */;
@@ -37,6 +43,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		C3E632E72DCBB4C70030FBC0 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				C3E632E32DCBB4C70030FBC0 /* GomuWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EC3E399D2DA61DB700AC2A7E /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -51,9 +68,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C3E632D92DCBB4C60030FBC0 /* GomuWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GomuWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC3E39822DA61DB600AC2A7E /* RunningTrackerWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RunningTrackerWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC3E39842DA61DB600AC2A7E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
-		EC3E39862DA61DB600AC2A7E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		EC3E399E2DA6201600AC2A7E /* RunningTrackerWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RunningTrackerWidgetExtension.entitlements; sourceTree = "<group>"; };
 		EC4A010F2D923B350086A781 /* Gomu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gomu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC4A011F2D923B370086A781 /* GomuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GomuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +77,25 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C351022A2DCD8CAE0050DFBD /* Exceptions for "Gomu" folder in "GomuWatch Watch App" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Components/CircularButton.swift,
+				Components/InformationText.swift,
+				Model/ChatModel.swift,
+				Model/Coordinate.swift,
+				Model/RunModel.swift,
+				Model/RunMotivationModel.swift,
+				Utils/HealthManager.swift,
+				Utils/LocationManager.swift,
+				ViewModel/AppleSignInManager.swift,
+				ViewModel/ChatViewModel.swift,
+				ViewModel/RunViewModel.swift,
+				ViewModel/SoundManager.swift,
+				ViewModel/SoundRun.swift,
+			);
+			target = C3E632D82DCBB4C60030FBC0 /* GomuWatch Watch App */;
+		};
 		EC3E399C2DA61DB700AC2A7E /* Exceptions for "RunningTrackerWidget" folder in "RunningTrackerWidgetExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -78,6 +113,11 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		C3E632DA2DCBB4C60030FBC0 /* GomuWatch Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "GomuWatch Watch App";
+			sourceTree = "<group>";
+		};
 		EC3E39882DA61DB600AC2A7E /* RunningTrackerWidget */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -90,6 +130,7 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				EC645A2B2DA4E2BE00FF64B3 /* Exceptions for "Gomu" folder in "Gomu" target */,
+				C351022A2DCD8CAE0050DFBD /* Exceptions for "Gomu" folder in "GomuWatch Watch App" target */,
 			);
 			path = Gomu;
 			sourceTree = "<group>";
@@ -107,12 +148,17 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C3E632D62DCBB4C60030FBC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EC3E397F2DA61DB600AC2A7E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC3E39872DA61DB600AC2A7E /* SwiftUI.framework in Frameworks */,
-				EC3E39852DA61DB600AC2A7E /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,15 +186,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EC3E39832DA61DB600AC2A7E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EC3E39842DA61DB600AC2A7E /* WidgetKit.framework */,
-				EC3E39862DA61DB600AC2A7E /* SwiftUI.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		EC4A01062D923B350086A781 = {
 			isa = PBXGroup;
 			children = (
@@ -157,7 +194,7 @@
 				EC4A01222D923B370086A781 /* GomuTests */,
 				EC4A012C2D923B370086A781 /* GomuUITests */,
 				EC3E39882DA61DB600AC2A7E /* RunningTrackerWidget */,
-				EC3E39832DA61DB600AC2A7E /* Frameworks */,
+				C3E632DA2DCBB4C60030FBC0 /* GomuWatch Watch App */,
 				EC4A01102D923B350086A781 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -169,6 +206,7 @@
 				EC4A011F2D923B370086A781 /* GomuTests.xctest */,
 				EC4A01292D923B370086A781 /* GomuUITests.xctest */,
 				EC3E39822DA61DB600AC2A7E /* RunningTrackerWidgetExtension.appex */,
+				C3E632D92DCBB4C60030FBC0 /* GomuWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,6 +214,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C3E632D82DCBB4C60030FBC0 /* GomuWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3E632E42DCBB4C70030FBC0 /* Build configuration list for PBXNativeTarget "GomuWatch Watch App" */;
+			buildPhases = (
+				C3E632D52DCBB4C60030FBC0 /* Sources */,
+				C3E632D62DCBB4C60030FBC0 /* Frameworks */,
+				C3E632D72DCBB4C60030FBC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C3E632DA2DCBB4C60030FBC0 /* GomuWatch Watch App */,
+			);
+			name = "GomuWatch Watch App";
+			packageProductDependencies = (
+			);
+			productName = "GomuWatch Watch App";
+			productReference = C3E632D92DCBB4C60030FBC0 /* GomuWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 		EC3E39812DA61DB600AC2A7E /* RunningTrackerWidgetExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC3E39992DA61DB700AC2A7E /* Build configuration list for PBXNativeTarget "RunningTrackerWidgetExtension" */;
@@ -206,11 +266,13 @@
 				EC4A010C2D923B350086A781 /* Frameworks */,
 				EC4A010D2D923B350086A781 /* Resources */,
 				EC3E399D2DA61DB700AC2A7E /* Embed Foundation Extensions */,
+				C3E632E72DCBB4C70030FBC0 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				EC3E39972DA61DB700AC2A7E /* PBXTargetDependency */,
+				C3E632E22DCBB4C70030FBC0 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				EC4A01112D923B350086A781 /* Gomu */,
@@ -275,9 +337,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1620;
+				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
+					C3E632D82DCBB4C60030FBC0 = {
+						CreatedOnToolsVersion = 16.3;
+					};
 					EC3E39812DA61DB600AC2A7E = {
 						CreatedOnToolsVersion = 16.2;
 					};
@@ -312,11 +377,19 @@
 				EC4A011E2D923B370086A781 /* GomuTests */,
 				EC4A01282D923B370086A781 /* GomuUITests */,
 				EC3E39812DA61DB600AC2A7E /* RunningTrackerWidgetExtension */,
+				C3E632D82DCBB4C60030FBC0 /* GomuWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C3E632D72DCBB4C60030FBC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EC3E39802DA61DB600AC2A7E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -348,6 +421,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C3E632D52DCBB4C60030FBC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EC3E397E2DA61DB600AC2A7E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,6 +459,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C3E632E22DCBB4C70030FBC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3E632D82DCBB4C60030FBC0 /* GomuWatch Watch App */;
+			targetProxy = C3E632E12DCBB4C70030FBC0 /* PBXContainerItemProxy */;
+		};
 		EC3E39972DA61DB700AC2A7E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EC3E39812DA61DB600AC2A7E /* RunningTrackerWidgetExtension */;
@@ -397,6 +482,72 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		C3E632E52DCBB4C70030FBC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "GomuWatch Watch App/GomuWatch Watch App.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B6SZL9KS58;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = GomuWatch;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "App ini membutuhkan akses ke data kesehatan Anda.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "App ini akan menyimpan data hasil tracking Anda ke HealthKit.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.asaduddin.GomuMulti;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.asaduddin.GomuMulti.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		C3E632E62DCBB4C70030FBC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "GomuWatch Watch App/GomuWatch Watch App.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B6SZL9KS58;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = GomuWatch;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "App ini membutuhkan akses ke data kesehatan Anda.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "App ini akan menyimpan data hasil tracking Anda ke HealthKit.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.asaduddin.GomuMulti;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.asaduddin.GomuMulti.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
 		EC3E399A2DA61DB700AC2A7E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -405,7 +556,7 @@
 				CODE_SIGN_ENTITLEMENTS = RunningTrackerWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KKV9F5ZRWP;
+				DEVELOPMENT_TEAM = B6SZL9KS58;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RunningTrackerWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = RunningTrackerWidget;
@@ -416,7 +567,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = franco.Gomu.RunningTrackerWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.asaduddin.GomuMulti.RunningTrackerWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -433,7 +584,7 @@
 				CODE_SIGN_ENTITLEMENTS = RunningTrackerWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KKV9F5ZRWP;
+				DEVELOPMENT_TEAM = B6SZL9KS58;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RunningTrackerWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = RunningTrackerWidget;
@@ -444,7 +595,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = franco.Gomu.RunningTrackerWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.asaduddin.GomuMulti.RunningTrackerWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -582,7 +733,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gomu/Preview Content\"";
-				DEVELOPMENT_TEAM = KKV9F5ZRWP;
+				DEVELOPMENT_TEAM = B6SZL9KS58;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Gomu/Info.plist;
@@ -592,6 +743,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -599,7 +751,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = franco.Gomu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.asaduddin.GomuMulti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -618,7 +770,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gomu/Preview Content\"";
-				DEVELOPMENT_TEAM = KKV9F5ZRWP;
+				DEVELOPMENT_TEAM = B6SZL9KS58;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Gomu/Info.plist;
@@ -628,6 +780,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -635,7 +788,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = franco.Gomu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.asaduddin.GomuMulti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -650,10 +803,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B6SZL9KS58;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = franco.GomuTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.asaduddin.GomuMultiTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -668,10 +822,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B6SZL9KS58;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = franco.GomuTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.asaduddin.GomuMultiTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -685,9 +840,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B6SZL9KS58;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = franco.GomuUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.asaduddin.GomuMultiUITest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -701,9 +857,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B6SZL9KS58;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = franco.GomuUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.asaduddin.GomuMultiUITest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -715,6 +872,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C3E632E42DCBB4C70030FBC0 /* Build configuration list for PBXNativeTarget "GomuWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3E632E52DCBB4C70030FBC0 /* Debug */,
+				C3E632E62DCBB4C70030FBC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EC3E39992DA61DB700AC2A7E /* Build configuration list for PBXNativeTarget "RunningTrackerWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
